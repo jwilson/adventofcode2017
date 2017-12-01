@@ -4,11 +4,7 @@ main() {
   print(input.fold(0, (a, b) {
     var index = (input.indexOf(b) == input.length) ? -1 : input.indexOf(b);
     index = index + 1 >= input.length ? -1 : index;
-    print(b);
-    print(input[index + 1]);
-    print('---');
-    var val = (b == input[index + 1]) ? int.parse(b) : 0;
     input[index == -1 ? 0 : index] = -1;
-    return a + val + ((index == 0 && b == input[input.length - 1]) ? int.parse(b) : 0) ;
+    return a + ((b == input[index + 1]) ? int.parse(b) : 0) + ((index == 0 && b == input[input.length - 1]) ? int.parse(b) : 0) ;
   }));
 }
