@@ -1,28 +1,33 @@
 main() {
-  int input = 347991;
-  int total = 1;
+  int input = 788;
+  bool keepGoing = true;
+  List<int> numbers = new List<int>();
   int iter = 1;
-  int iterations = 0;
-
-  while(total <= input) {
-    total += iter * 2;
-    iterations += 2;
-    if (total > input + iter) {
-      total -= iter;
-      iterations--;
+  numbers.add(1);
+  while(keepGoing) {
+    int iteration = 4 * iter;
+    for (int i = 0; i < iteration; i++) {
+      numbers.add()
     }
+
     iter++;
   }
-
-  int circuits = (iterations / 4).toInt();
-  if (iterations % 4 != 0) {
-    circuits++;
-  }
-
-  int previousCorner = total - iter;
-  int mid = ((total - previousCorner) / 2).round();
-  int diff = input - (previousCorner + mid);
-  int toMiddle = circuits - diff;
-  int steps = toMiddle + (diff * 2);
-  print(steps);
 }
+
+/*
+
+List<int> testInput = [1, 1, 2, 4, 5, 10, 11, 23, 25, 26, 54, 57, 59, 122, 133, 142, 147, 304, 330, 351, 362, 747, 806];
+
+1, 1, 2, 4, 5, 10, 11, 23, 25, 26, 54, 57, 59, 122, 133, 142, 147, 304, 330, 351, 362, 747, 806
+0  1  2  3  4   5   6   7   8      10  11            14                  18                  22
+
+
+8
+16
+24
+
+1,3,5,7
+10,14,18,22
+27,33,39,45
+
+*/

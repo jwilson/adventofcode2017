@@ -14,7 +14,7 @@ main() {
     iter++;
   }
 
-  int circuits = (iterations / 4).toInt();
+  int circuits = iterations ~/ 4;
   if (iterations % 4 != 0) {
     circuits++;
   }
