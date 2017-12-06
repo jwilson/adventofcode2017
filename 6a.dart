@@ -19,7 +19,7 @@ main() {
       banks[iter]++;
       iter++;
     }
-    var cycle = banks.join('');
+    var cycle = banks.join(' ');
     if (cycles.contains(cycle)) {
       cycleIndex = cycles.indexOf(cycle);
     }
